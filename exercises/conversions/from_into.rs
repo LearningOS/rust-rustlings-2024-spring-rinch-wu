@@ -44,6 +44,31 @@ impl Default for Person {
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        match s.len() {
+            0 => Person::default(),
+            _ => {
+                let words: Vec<&str> = s.split(",").collect();
+                match words.len() {
+                    2 => {
+                        let name = words[0];
+                        match name {
+                            "" => Person::default(),
+                            _ => {
+                                let age = words[1].parse::<usize>();
+                                match age {
+                                    Ok(a) => Person {
+                                        name: String::from(name),
+                                        age: a,
+                                    },
+                                    _ => Person::default(),
+                                }
+                            }
+                        }
+                    }
+                    _ => Person::default(),
+                }
+            }
+        }
     }
 }
 
