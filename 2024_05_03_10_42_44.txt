@@ -1,0 +1,112 @@
+❌ strings4 points 0/1
+❌ move_semantics1 points 0/1
+✅ functions3 pass
+✅ intro2 pass
+❌ modules1 points 0/1
+❌ move_semantics2 points 0/1
+❌ variables1 points 0/1
+❌ move_semantics3 points 0/1
+✅ functions4 pass
+❌ modules2 points 0/1
+❌ modules3 points 0/1
+❌ move_semantics4 points 0/1
+✅ functions5 pass
+❌ move_semantics5 points 0/1
+❌ move_semantics6 points 0/1
+❌ structs1 points 0/1
+✅ hashmaps1 pass
+❌ variables2 points 0/1
+✅ if1 pass
+❌ variables3 points 0/1
+❌ variables4 points 0/1
+✅ if2 pass
+✅ hashmaps2 pass
+❌ structs2 points 0/1
+❌ variables5 points 0/1
+❌ variables6 points 0/1
+❌ structs3 points 0/1
+✅ if3 pass
+❌ quiz1 points 0/1
+✅ hashmaps3 pass
+✅ functions1 pass
+✅ enums1 pass
+❌ primitive_types1 points 0/1
+❌ quiz2 points 0/1
+❌ primitive_types2 points 0/1
+❌ options1 points 0/1
+❌ primitive_types3 points 0/1
+✅ functions2 pass
+❌ primitive_types4 points 0/1
+✅ enums2 pass
+❌ options2 points 0/1
+❌ primitive_types5 points 0/1
+❌ options3 points 0/1
+❌ primitive_types6 points 0/1
+❌ vecs1 points 0/1
+✅ generics2 pass
+❌ vecs2 points 0/1
+✅ enums3 pass
+❌ traits1 points 0/1
+❌ strings1 points 0/1
+❌ traits2 points 0/1
+✅ errors1 pass
+❌ strings2 points 0/1
+❌ traits3 points 0/1
+✅ iterators1 pass
+❌ strings3 points 0/1
+❌ traits4 points 0/1
+❌ threads2 points 0/1
+❌ traits5 points 0/1
+✅ errors2 pass
+❌ threads3 points 0/1
+✅ iterators2 pass
+❌ quiz3 points 0/1
+✅ errors3 pass
+✅ macros1 pass
+✅ macros2 pass
+✅ lifetimes1 pass
+✅ iterators3 pass
+✅ errors4 pass
+✅ macros3 pass
+✅ lifetimes2 pass
+✅ errors5 pass
+✅ iterators4 pass
+✅ macros4 pass
+✅ lifetimes3 pass
+❌ tests1 points 0/1
+✅ errors6 pass
+❌ tests2 points 0/1
+❌ tests3 points 0/1
+❌ tests4 points 0/1
+✅ iterators5 pass
+✅ generics1 pass
+❌ tests5 points 0/1
+❌ box1 points 0/1
+❌ tests6 points 0/1
+❌ rc1 points 0/1
+❌ arc1 points 0/1
+❌ cow1 points 0/1
+❌ tests7 points 0/1
+❌ threads1 points 0/1
+❌ tests8 points 0/1
+❌ algorithm3 points 0/1
+❌ tests9 points 0/1
+❌ algorithm4 points 0/1
+❌ algorithm1 points 0/1
+✅ clippy1 pass
+✅ clippy3 pass
+❌ algorithm5 points 0/1
+✅ using_as pass
+❌ algorithm2 points 0/1
+✅ clippy2 pass
+❌ algorithm6 points 0/1
+✅ from_into pass
+❌ algorithm8 points 0/1
+❌ algorithm9 points 0/1
+❌ algorithm7 points 0/1
+✅ from_str pass
+❌ algorithm10 points 0/1
+✅ try_from_into pass
+✅ as_ref_mut pass
+
+Points: 43/110
