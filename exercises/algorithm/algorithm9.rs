@@ -1,11 +1,11 @@
 /*
-	heap
-	This question requires you to implement a binary heap function
+    heap
+    This question requires you to implement a binary heap function
 */
-// I AM NOT DONE
 
 use std::cmp::Ord;
 use std::default::Default;
+use std::fmt::Display;
 
 pub struct Heap<T>
 where
@@ -37,7 +37,18 @@ where
     }
 
     pub fn add(&mut self, value: T) {
-        //TODO
+        self.items.push(value);
+        self.count += 1;
+        let mut index = self.count;
+        while index > 1 {
+            let index_parent = self.parent_idx(index);
+            if (self.comparator)(&self.items[index], &self.items[index_parent]) {
+                self.items.swap(index, index_parent);
+                index = index_parent
+            } else {
+                break;
+            }
+        }
     }
 
     fn parent_idx(&self, idx: usize) -> usize {
@@ -57,8 +68,31 @@ where
     }
 
     fn smallest_child_idx(&self, idx: usize) -> usize {
-        //TODO
-		0
+        let left_child_idx = self.left_child_idx(idx);
+        let right_child_idx = self.right_child_idx(idx);
+        if left_child_idx > self.count {
+            0
+        } else if right_child_idx > self.count {
+            let child_idx = left_child_idx;
+            if (self.comparator)(&self.items[idx], &self.items[child_idx]) {
+                0
+            } else {
+                child_idx
+            }
+        } else {
+            let child_idx = {
+                if (self.comparator)(&self.items[left_child_idx], &self.items[right_child_idx]) {
+                    left_child_idx
+                } else {
+                    right_child_idx
+                }
+            };
+            if (self.comparator)(&self.items[idx], &self.items[child_idx]) {
+                0
+            } else {
+                child_idx
+            }
+        }
     }
 }
 
@@ -85,7 +119,27 @@ where
 
     fn next(&mut self) -> Option<T> {
         //TODO
-		None
+        if self.count == 0 {
+            None
+        } else {
+            self.items.swap(1, self.count);
+            let res = self.items.pop();
+            self.count -= 1;
+            let mut idx = 1;
+            loop {
+                let smallest_child_idx = self.smallest_child_idx(idx);
+                if smallest_child_idx == 0 {
+                    break;
+                }
+                if (self.comparator)(&self.items[smallest_child_idx], &self.items[idx]) {
+                    self.items.swap(smallest_child_idx, idx);
+                    idx = smallest_child_idx
+                } else {
+                    break;
+                }
+            }
+            res
+        }
     }
 }
 
@@ -129,6 +183,7 @@ mod tests {
         heap.add(2);
         heap.add(9);
         heap.add(11);
+
         assert_eq!(heap.len(), 4);
         assert_eq!(heap.next(), Some(2));
         assert_eq!(heap.next(), Some(4));
@@ -144,6 +199,7 @@ mod tests {
         heap.add(2);
         heap.add(9);
         heap.add(11);
+        println!("Linked List is {:?}", &heap.items);
         assert_eq!(heap.len(), 4);
         assert_eq!(heap.next(), Some(11));
         assert_eq!(heap.next(), Some(9));
